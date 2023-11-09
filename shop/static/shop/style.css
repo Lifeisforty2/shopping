@@ -1,0 +1,33 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #d85b5b;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+button {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    color : #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+buton:hover {
+    background-color: #0056b3;
+}
