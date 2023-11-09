@@ -4,5 +4,11 @@ __pychache__/
 *$py.class
 
 #Virtual environment
+myvenv/
+venv/
+
+#Database
+db.sqlite3
+*.sqlite3
 
 
