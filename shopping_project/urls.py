@@ -17,14 +17,22 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth  import views as auth_views
+<<<<<<< HEAD
+from shop.views import logout_view
+=======
 from shop.views import home_view
 from django.contrib.auth.views import LogoutView
+>>>>>>> 796bd902aeab841c3926976a4886b744bd086395
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("home/", home_view, name="home"),
     path("login/", auth_views.LoginView.as_view(template_name="login.html"), name="login"),
+<<<<<<< HEAD
+    path('logout/', logout_view, name='logout'),
+=======
     path("logout/", LogoutView.as_view(), name="logout"),
+>>>>>>> 796bd902aeab841c3926976a4886b744bd086395
     #...
 
 ]
