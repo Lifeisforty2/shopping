@@ -31,3 +31,42 @@ button {
 buton:hover {
     background-color: #0056b3;
 }
+/*home view*/
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav .logout-button {
+    color: #fff;
+    text-decoration: none;
+    background-color: #f44336;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+nav .logout-button:hover {
+    background-color: #c0392b;
+}
+
+main {
+    padding: 20px;
+}
+/* Style for logout button */
+.logout-button {
+    background-color: #ff4c4c;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.logout-button:hover {
+    background-color: #e22a2a;
+}
