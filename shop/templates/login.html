@@ -12,7 +12,7 @@
         <form method="post" action="{% url 'login' %}"> 
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit" class="button-primary">Login</button>
+            <button type="submit" class="button">Login</button>
             <a href="{% url 'register' %} " class="register-button">Register</a>
         </form>
         <p class="slogan">Your Gateway to Sports Excellence</p>
