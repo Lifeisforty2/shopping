@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f7fa;
+    background-color: #FFFFFF; 
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,37 +11,48 @@ body {
 
 /* Form styling */
 form {
-    background: #fff;
+    background: #FFFFFF; 
     padding: 20px;
     border-radius: 8px; 
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* Heading styling */
-h2 {
-    margin-bottom: 20px;
+h1, h2 {
     text-align: center;
-    color: #4b0082; 
 }
+
+h1 {
+    margin-bottom: 20px;
+    color: #004080; /* Deep Blue */
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #004080; /* Deep Blue */
+}
+
 /* Mini cart styling */
 .mini-cart {
     position: fixed;
     top: 10px;
     right: 10px;
     width: 200px;
-    background-color: #fff; 
-    border: 1px solid #ddd;
+    background-color: #FFFFFF;
+    border: 1px solid #333333; 
     padding: 15px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     z-index: 100;
 }
 
 /* Button styling */
-.register-button {
-    background-color:#3498db;
+.register-button,
+.logout-button,
+.button {
+    background-color: #FF4500; 
     border: none;
     padding: 12px 24px; 
-    color: #fff;
+    color: #FFFFFF; 
     border-radius: 8px; 
     cursor: pointer;
     display: inline-block;
@@ -49,47 +60,18 @@ h2 {
     text-decoration: none; 
     transition: background-color 0.3s ease;
 }
-.logout-button {
-    background-color:#3498db;
-    border: none;
-    padding: 12px 24px; 
-    color: #fff;
-    border-radius: 8px; 
-    cursor: pointer;
-    display: inline-block;
-    margin-top: 10px;
-    transition: background-color 0.3s ease; 
-}
-.button {
-    background-color:#3498db;
-    border: none;
-    padding: 12px 24px; 
-    color: #fff;
-    border-radius: 8px; 
-    cursor: pointer;
-    display: inline-block;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-}
-/* Register button hover effect */
-.register-button:hover {
-    background-color: #6a5acd; 
-}
-
-/* Logout button hover effect */
-.logout-button:hover {
-    background-color: #6a5acd; 
-}
 
 /* Button hover effect */
+.register-button:hover,
+.logout-button:hover,
 .button:hover {
-    background-color: #6a5acd;
+    background-color: #333333; 
 }
 
 /* Header styling */
 header {
-    background-color: #4b0082;
-    color: #fff;
+    background-color: #004080; 
+    color: #FFFFFF;
     padding: 15px 20px; 
     text-align: center;
 }
@@ -128,7 +110,7 @@ main {
     text-align: center;
     font-size: 20px;
     margin-bottom: 20px;
-    color: #4b0082;
+    color: #004080; 
 }
 
 /* Page container styling */
@@ -141,4 +123,9 @@ main {
 .welcome-message {
     align-self: center; 
     margin-top: 20px;
+}
+
+/* Accent color - Vibrant Yellow */
+.accent-yellow {
+    color: #FFD700; /* Vibrant Yellow */
 }

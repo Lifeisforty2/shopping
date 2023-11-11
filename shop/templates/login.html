@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login - Welcome to ClickNBuy</title>
+    <title>Login - ClickNBuy</title>
     {% load static %}
     <link href="{% static 'shop/style.css' %}" rel="stylesheet">
 </head>
 <body>
     <div class="login-container">
-        <h2>Login</h2>
+        <h1 class="accent-yellow">ClickNBuy</h1>
+        <h2 class="accent-yellow">Login</h2>
         <form method="post" action="{% url 'login' %}"> 
             {% csrf_token %}
             {{ form.as_p }}
