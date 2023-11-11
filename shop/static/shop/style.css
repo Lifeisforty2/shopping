@@ -65,7 +65,7 @@ h2 {
 .register-button:hover,
 .logout-button:hover,
 .button:hover {
-    background-color: #333333; 
+    background-color: #FF6347; 
 }
 
 /* Header styling */
@@ -125,7 +125,3 @@ main {
     margin-top: 20px;
 }
 
-/* Accent color - Vibrant Yellow */
-.accent-yellow {
-    color: #FFD700; /* Vibrant Yellow */
-}

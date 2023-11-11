@@ -7,8 +7,9 @@
 </head>
 <body>
     <div class="login-container">
-        <h1 class="accent-yellow">ClickNBuy</h1>
-        <h2 class="accent-yellow">Login</h2>
+        <h1>ClickNBuy Sports Hub</h1>
+        <p class="slogan">Your Gateway to Sports Excellence</p>
+        <h2>Login</h2>
         <form method="post" action="{% url 'login' %}"> 
             {% csrf_token %}
             {{ form.as_p }}
