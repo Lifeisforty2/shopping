@@ -8,6 +8,12 @@
 </head>
 <body>
     <div class="page-container">
+        <div class="search-bar">
+            <form action="{% url 'home' %}" method="GET">
+                <input type="text" name="query" placeholder="Search products..." value="{{ query }}">
+                <button type="submit">Search</button>
+            </form>
+        </div>
         <div class="welcome-message">
             {% if user.is_authenticated %}
                 Hello, {{ user.username }}. You are logged in.
