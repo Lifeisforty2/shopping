@@ -50,6 +50,7 @@ h2 {
 /* Button styling */
 .register-button,
 .logout-button,
+.button-primary,
 .button {
     border: none;
     padding: 12px 24px; 
