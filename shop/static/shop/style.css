@@ -1,6 +1,6 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #eaf4fc; 
+    font-family: 'Open Sans', sans-serif;
+    background-color: #eaf4fc;
     margin: 0;
     padding: 0;
     display: flex;
@@ -13,9 +13,9 @@ body {
 form {
     background: #FFFFFF; 
     padding: 20px;
-    border-radius: 8px; 
+    border-radius: 8px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    text-align: center; 
+    text-align: center;
 }
 
 /* Mini cart styling */
@@ -24,8 +24,8 @@ form {
     top: 10px;
     right: 10px;
     width: 200px;
-    background-color: #FFFFFF;
-    border: 1px solid #333333; 
+    background-color: #FFFFFF; 
+    border: 1px solid #333333;
     padding: 15px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     z-index: 100;
@@ -37,12 +37,12 @@ form {
 .button-primary,
 .button {
     border: none;
-    padding: 12px 24px; 
-    border-radius: 8px; 
+    padding: 12px 24px;
+    border-radius: 8px;
     cursor: pointer;
     display: inline-block;
     margin-top: 10px;
-    text-decoration: none; 
+    text-decoration: none;
     font-size: 16px;
     transition: background-color 0.3s ease;
 }
@@ -50,7 +50,7 @@ form {
 /* Button hover effect */
 .register-button:hover,
 .logout-button:hover,
-.button-primary:hover
+.button-primary:hover,
 .button:hover {
     background-color: #333333; 
 }
@@ -69,8 +69,8 @@ form {
 /* Header styling */
 header {
     background-color: #004080; 
-    color: #FFFFFF;
-    padding: 15px 20px; 
+    color: #FFFFFF; 
+    padding: 15px 20px;
     text-align: center;
 }
 
@@ -83,7 +83,7 @@ main {
 .product-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; 
+    justify-content: space-around;
 }
 
 /* Product item styling */
@@ -119,11 +119,10 @@ main {
 
 /* Welcome message positioning */
 .welcome-message {
-    align-self: center; 
+    align-self: center;
     margin-top: 20px;
 }
 
-/* Add more blues, greens, and oranges for sports theme */
 .slogan {
     text-align: center;
     color: #007acc; 
@@ -132,18 +131,18 @@ main {
 /* Heading styling */
 h1, h2 {
     text-align: center;
-    color: #008000; 
+    color: #008000;
 }
 
 h1 {
     margin-bottom: 20px;
-    font-size: 36px; 
-    color: #004080;
+    font-size: 36px;
+    color: #004080; 
 }
 
 h2 {
     margin-bottom: 10px;
-    color: #004080;
+    color: #004080; 
 }
 
 h3, p {
