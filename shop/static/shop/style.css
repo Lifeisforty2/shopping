@@ -54,7 +54,6 @@ h2 {
 .button {
     border: none;
     padding: 12px 24px; 
-    width: 150px; 
     border-radius: 8px; 
     cursor: pointer;
     display: inline-block;
@@ -66,6 +65,7 @@ h2 {
 /* Button hover effect */
 .register-button:hover,
 .logout-button:hover,
+.button-primary:hover
 .button:hover {
     background-color: #333333; 
 }
