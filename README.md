@@ -32,7 +32,7 @@
 
 ## Database Setup
 
-1. **Migrate Database (This step isnt needed since i included the Database but it is important to run this after new migrations have been created, like changes to the db. and after pulling updates)**
+1. **Migrate Database ()**
     Run the folliwing command to create the database schema.
     ...
     Python manage.py migrate
