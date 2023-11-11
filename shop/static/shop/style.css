@@ -1,6 +1,6 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #a95252;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #eaf4fc;
     margin: 0;
     padding: 0;
     display: flex;
@@ -8,84 +8,85 @@ body {
     align-items: center;
     min-height: 100vh;
 }
+
+/* Form styling */
 form {
-    background: #fff;
+    background: #FFFFFF; 
     padding: 20px;
-    border-radius: 4px;
+    border-radius: 8px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-}
-h2 {
-    margin-bottom: 20px;
     text-align: center;
 }
+
+/* Mini cart styling */
 .mini-cart {
     position: fixed;
     top: 10px;
     right: 10px;
     width: 200px;
-    background-color: white;
-    border: 1px solid #ddd;
+    background-color: #FFFFFF; 
+    border: 1px solid #333333;
     padding: 15px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     z-index: 100;
 }
 
-.register-button {
-    background-color:#e22a2a;
-    border: none;
-    padding: 10px 20px;
-    color : #fff;
-    border-radius: 4px;
-    cursor: pointer;
-    display: inline-block;
-    margin-top: 10px;
-}
-.logout-button {
-    background-color: #ff4c4c;
-    color: white;
-    padding: 8px 12px;
-    text-decoration: none;
-    border-radius: 4px;
-    display: inline-block;
-    margin-top: 10px;
-}
-/* Style for logout button on hover */
-.logout-button:hover {
-    background-color: #e22a2a;
-}
+/* Button styling */
+.register-button,
+.logout-button,
+.button-primary,
 .button {
-    background-color: #e22a2a;
     border: none;
-    padding: 10px 20px;
-    color : #fff;
-    border-radius: 4px;
+    padding: 12px 24px;
+    border-radius: 8px;
     cursor: pointer;
-    display: block;
-    width: 100%;
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
+
+/* Button hover effect */
+.register-button:hover,
+.logout-button:hover,
+.button-primary:hover,
 .button:hover {
-    background-color: #0062cc;
+    background-color: #333333; 
 }
-/*home view*/
+
+/* Customize login and register buttons */
+.button-primary {
+    background-color: #f0dc24; 
+    color: #000000; 
+}
+
+.register-button {
+    background-color: #d58b3b; 
+    color: #000000; 
+}
+
+/* Header styling */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
+    background-color: #004080; 
+    color: #FFFFFF; 
+    padding: 15px 20px;
     text-align: center;
 }
 
+/* Main content styling */
 main {
     padding: 20px;
 }
 
-/* style for produc list */
+/* Product list styling */
 .product-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-/* style for product item */
+/* Product item styling */
 .product-item {
     width: 300px;
     margin-bottom: 20px;
@@ -93,7 +94,8 @@ main {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
-/* image style */
+
+/* Product image styling */
 .product-image {
     width: 100%;
     height: auto;
@@ -101,20 +103,48 @@ main {
     border-radius: 8px;
 }
 
+/* Welcome message styling */
 .welcome-message {
     text-align: center;
     font-size: 20px;
     margin-bottom: 20px;
+    color: #004080; 
 }
 
+/* Page container styling */
 .page-container {
     display: flex;
     flex-direction: column;
 }
 
+/* Welcome message positioning */
 .welcome-message {
-    align-self: flex-start;
-    margin-left: 10px;
-    margin-top: 10px;
+    align-self: center;
+    margin-top: 20px;
+}
 
+.slogan {
+    text-align: center;
+    color: #007acc; 
+}
+
+/* Heading styling */
+h1, h2 {
+    text-align: center;
+    color: #008000;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #004080; 
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #004080; 
+}
+
+h3, p {
+    color: #000080; 
 }
