@@ -64,6 +64,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "shop.context_processors.cart_processor",
             ],
         },
     },
@@ -127,3 +128,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 LOGIN_REDIRECT_URL = "index"
 LOGIN_URL = "login"
+
+MEDIA_ROOT = BASE_DIR / "media" # where to store uploaded files
+MEDIA_URL = "/media/" # how to access uploaded files on the web
