@@ -39,8 +39,29 @@ h2 {
 }
 
 /* Button styling */
-.register-button,
-.logout-button,
+.register-button {
+    background-color:#3498db;
+    border: none;
+    padding: 12px 24px; 
+    color: #fff;
+    border-radius: 8px; 
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s ease; 
+}
+
+.logout-button {
+    background-color:#3498db;
+    border: none;
+    padding: 12px 24px; 
+    color: #fff;
+    border-radius: 8px; 
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s ease; 
+}
 .button {
     background-color:#3498db;
     border: none;
