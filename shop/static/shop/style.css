@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #eaf4fc; /* Light Blue */
+    background-color: #eaf4fc; 
     margin: 0;
     padding: 0;
     display: flex;
@@ -15,23 +15,23 @@ form {
     padding: 20px;
     border-radius: 8px; 
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    text-align: center; /* Center the form content */
+    text-align: center; 
 }
 
 /* Heading styling */
 h1, h2 {
     text-align: center;
-    color: #004080; /* Deep Blue */
+    color: #004080; 
 }
 
 h1 {
     margin-bottom: 20px;
-    font-size: 36px; /* Increase font size for the title */
+    font-size: 36px; 
 }
 
 h2 {
     margin-bottom: 10px;
-    color: #004080; /* Deep Blue */
+    color: #004080;
 }
 
 /* Mini cart styling */
@@ -72,18 +72,18 @@ h2 {
 
 /* Customize login and register buttons */
 .button-primary {
-    background-color: #c64b1e; /* Red for login button */
-    color: #FFFFFF; 
+    background-color: #f0dc24; 
+    color: #000000; 
 }
 
 .register-button {
-    background-color: #df7c13; /* Light Orange for register button */
-    color: #ffffff; /* Dark text on light background */
+    background-color: #d58b3b; 
+    color: #000000; 
 }
 
 /* Header styling */
 header {
-    background-color: #004080; /* Deep Blue */
+    background-color: #004080; 
     color: #FFFFFF;
     padding: 15px 20px; 
     text-align: center;
@@ -138,14 +138,14 @@ main {
     margin-top: 20px;
 }
 
-/* Add more blues, greens, and oranges for the sports theme */
+/* Add more blues, greens, and oranges for sports theme */
 .slogan {
     text-align: center;
-    color: #007acc; /* Darker Blue */
+    color: #007acc; 
 }
 
 h1, h2, h3, p {
-    color: #1a8917; /* Dark Green */
+    color: #1a8917; 
 }
 
 
