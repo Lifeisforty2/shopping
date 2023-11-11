@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #FFFFFF; 
+    background-color: #eaf4fc; /* Light Blue */
     margin: 0;
     padding: 0;
     display: flex;
@@ -20,11 +20,12 @@ form {
 /* Heading styling */
 h1, h2 {
     text-align: center;
+    color: #004080; /* Deep Blue */
 }
 
 h1 {
     margin-bottom: 20px;
-    color: #004080; /* Deep Blue */
+    font-size: 36px; /* Increase font size for the title */
 }
 
 h2 {
@@ -49,7 +50,7 @@ h2 {
 .register-button,
 .logout-button,
 .button {
-    background-color: #FF4500; 
+    background-color: #FF4500; /* Bright Red */
     border: none;
     padding: 12px 24px; 
     color: #FFFFFF; 
@@ -65,12 +66,12 @@ h2 {
 .register-button:hover,
 .logout-button:hover,
 .button:hover {
-    background-color: #FF6347; 
+    background-color: #333333; 
 }
 
 /* Header styling */
 header {
-    background-color: #004080; 
+    background-color: #004080; /* Deep Blue */
     color: #FFFFFF;
     padding: 15px 20px; 
     text-align: center;
@@ -125,3 +126,22 @@ main {
     margin-top: 20px;
 }
 
+/* Add more blues, greens, and oranges for the sports theme */
+.slogan {
+    text-align: center;
+    color: #007acc; /* Darker Blue */
+}
+
+h1, h2, h3, p {
+    color: #1a8917; /* Dark Green */
+}
+
+/* Additional styles for a sports-themed look */
+.button-primary {
+    background-color: #ff8c00; /* Dark Orange */
+    color: #FFFFFF; 
+}
+
+.button-primary:hover {
+    background-color: #cc7000; /* Darker Orange */
+}
