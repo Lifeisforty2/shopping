@@ -53,6 +53,7 @@ h2 {
 .button {
     border: none;
     padding: 12px 24px; 
+    width: 150px; 
     border-radius: 8px; 
     cursor: pointer;
     display: inline-block;
@@ -64,7 +65,7 @@ h2 {
 /* Button hover effect */
 .register-button:hover,
 .logout-button:hover,
-.button:hover {
+.button-primary:hover {
     background-color: #333333; 
 }
 
@@ -146,12 +147,4 @@ h1, h2, h3, p {
     color: #1a8917; /* Dark Green */
 }
 
-/* Additional styles for a sports-themed look */
-.button-primary {
-    background-color: #ff8c00; /* Dark Orange */
-    color: #FFFFFF; 
-}
 
-.button-primary:hover {
-    background-color: #cc7000; /* Darker Orange */
-}
