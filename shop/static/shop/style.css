@@ -15,6 +15,7 @@ form {
     padding: 20px;
     border-radius: 8px; 
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    text-align: center; /* Center the form content */
 }
 
 /* Heading styling */
@@ -50,10 +51,8 @@ h2 {
 .register-button,
 .logout-button,
 .button {
-    background-color: #FF4500; /* Bright Red */
     border: none;
     padding: 12px 24px; 
-    color: #FFFFFF; 
     border-radius: 8px; 
     cursor: pointer;
     display: inline-block;
@@ -67,6 +66,17 @@ h2 {
 .logout-button:hover,
 .button:hover {
     background-color: #333333; 
+}
+
+/* Customize login and register buttons */
+.button-primary {
+    background-color: #FF4500; /* Red for login button */
+    color: #FFFFFF; 
+}
+
+.register-button {
+    background-color: #df7c13; /* Light Orange for register button */
+    color: #ffffff; /* Dark text on light background */
 }
 
 /* Header styling */
