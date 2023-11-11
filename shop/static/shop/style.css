@@ -48,8 +48,10 @@ h2 {
     cursor: pointer;
     display: inline-block;
     margin-top: 10px;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none; 
     transition: background-color 0.3s ease;
+    width: 150px; 
+    height: 40px; 
 }
 
 .logout-button {
@@ -62,6 +64,8 @@ h2 {
     display: inline-block;
     margin-top: 10px;
     transition: background-color 0.3s ease; 
+    width: 150px; 
+    height: 40px; 
 }
 .button {
     background-color:#3498db;
@@ -72,7 +76,9 @@ h2 {
     cursor: pointer;
     display: inline-block;
     margin-top: 10px;
-    transition: background-color 0.3s ease; 
+    transition: background-color 0.3s ease;
+    width: 150px; 
+    height: 40px; 
 }
 
 /* Register button hover effect */
