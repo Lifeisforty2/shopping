@@ -126,7 +126,7 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
-LOGIN_REDIRECT_URL = "index"
+LOGIN_REDIRECT_URL = "home"
 LOGIN_URL = "login"
 
 MEDIA_ROOT = BASE_DIR / "media" # where to store uploaded files
