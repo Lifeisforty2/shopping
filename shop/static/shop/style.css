@@ -112,7 +112,7 @@ main {
     text-align: center;
     font-size: 20px;
     margin-bottom: 20px;
-    background-color: #ffffff;
+    background-color: #ffffff !important;
     color: #000000; 
 }
 
