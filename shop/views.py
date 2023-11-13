@@ -4,6 +4,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from .models import SportsEquipment, Order, OrderItem
 from django.contrib.auth.models import User
+from .forms import CustomUserCreationForm
 
 def home_view(request):
     # Initially set products to all products
