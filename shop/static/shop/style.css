@@ -73,7 +73,7 @@ color: #ffffff;
 /* Header styling */
 header {
     background-color: #ffffff; 
-    color: #000000; 
+    color: #ffffff; 
     padding: 15px 20px;
     text-align: center;
 }
@@ -112,7 +112,8 @@ main {
     text-align: center;
     font-size: 20px;
     margin-bottom: 20px;
-    color: #ffffff; 
+    background-color: #ffffff;
+    color: #000000; 
 }
 
 /* Page container styling */
