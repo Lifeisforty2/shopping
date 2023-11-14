@@ -19,12 +19,25 @@ from django.urls import path, include
 from django.contrib.auth  import views as auth_views
 from shop.views import home_view
 from django.contrib.auth.views import LogoutView
+<<<<<<< HEAD
+=======
+from shop import views
+from django.conf import settings
+from django.conf.urls.static import static
+
+>>>>>>> 6525beb2539f5d5166a364c1b0927b18e0e77a90
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("home/", home_view, name="home"),
     path("login/", auth_views.LoginView.as_view(template_name="login.html"), name="login"),
+<<<<<<< HEAD
     path("logout/", LogoutView.as_view(), name="logout"),
+=======
+    path("logout/", LogoutView.as_view(next_page="login"), name="logout"),
+    path("add_to_order/<int:equipment_id>/", views.add_to_order, name="add_to_order"),
+    path("register/", views.register, name="register"),
+>>>>>>> 6525beb2539f5d5166a364c1b0927b18e0e77a90
     #...
 
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

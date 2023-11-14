@@ -7,13 +7,69 @@
     <link href="{% static 'shop/style.css' %}" rel="stylesheet" >
 </head>
 <body>
-    <header>
-        <h1>Welcome to the Home Page</h1>
-        <nav>
-            <a href="{% url 'logout' %} " class="logout-button">Logout</a> |
-        </nav>
-    </header>
-    <main>
-        <p>This is the home page for authenticated users.</p>
-    </main>
+    <div class="page-container">
+        <div class="search-bar">
+            <form action="{% url 'home' %}" method="GET">
+                <input type="text" name="query" placeholder="Search products..." value="{{ query }}">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <div class="welcome-message">
+            {% if user.is_authenticated %}
+                Hello, {{ user.username }}. You are logged in.
+                <a href="{% url 'logout' %}">Logout</a>
+            {% else %}
+                <a href="{% url 'login' %}">Login</a> |
+                <a href="{% url 'register' %}">Register</a>
+            {% endif %}
+        </div>
+        <div class="organize-filter">
+            <form action="{% url 'home' %}" method="GET">
+                <label for="sort">Sort by:</label>
+                <select name="sort" id="sort">
+                    <option value="">Featured</option>
+                    <option value="price_low" {% if sort_option == 'price_low' %}selected{% endif %}>Price: Low to High</option>
+                    <option value="price_high" {% if sort_option == 'price_high' %}selected{% endif %}>Price: High to Low</option>
+                </select>
+                <button type="submit">Apply</button>
+            </form>
+        </div>
+        <header> 
+            <h1>Welcome to the Home Page</h1>
+            <nav>
+                <a href="{% url 'logout' %} " class="logout-button">Logout</a> |
+            </nav>
+        </header>
+
+        <main>
+            <h2>Products</h2>
+            <div class="product-list">
+                {% for product in products %}
+                    <div class="product-item">
+                        <!-- i have name, equipment_type, brand, price, description, image, available-->
+                        <h3>{{ product.name }}</h3>
+                        <p>{{ product.equipment_type }}</p>
+                        <p>{{ product.brand }}</p>
+                        <p>{{ product.description }}</p>
+                        <p>Price: {{ product.price }}</p>
+                        <p>Available: {{ product.available }}</p>
+                        <img src="{{ product.image.url }}" alt="{{ product.name }}" class="product-image">
+                        <a href="{% url 'add_to_order' product.id %}">Add to Order</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </main>
+    </div>
+
+    <div class="mini-cart">
+        <h3>Your Cart</h3>
+        <ul>
+            {% for item in cart.items.all %}
+                <li>{{ item.equipment.name }} - {{ item.quantity }}</li>
+            {% empty %}
+                <li>Your cart is empty</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
 </html>
