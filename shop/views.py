@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from .models import SportsEquipment, Order, OrderItem
 from django.contrib.auth.models import User
 from .forms import CustomUserCreationForm
+from django.contrib.auth.decorators import login_required
 
 def home_view(request):
     products = SportsEquipment.objects.all()
@@ -29,7 +30,7 @@ the equipment_id is passed to the add_to_order view by the url
 equipment_id is the id of the equipment that the user wants to add to the order and is not
 '''
 
-
+@login_required
 def add_to_order(request, equipment_id):
     equipment = get_object_or_404(SportsEquipment, id=equipment_id)
     
