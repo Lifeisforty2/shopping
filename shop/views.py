@@ -1,10 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login, logout
 from django.contrib.auth.forms import AuthenticationForm
-<<<<<<< HEAD
-def home_view(request):
-    return render(request, "home.html")
-=======
 from django.contrib.auth.decorators import login_required
 from .models import SportsEquipment, Order, OrderItem
 from django.contrib.auth.models import User
@@ -58,4 +54,3 @@ def register(request):
     else:
         form = CustomUserCreationForm()
     return render(request, "register.html", {"form": form})
->>>>>>> 6525beb2539f5d5166a364c1b0927b18e0e77a90
