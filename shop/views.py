@@ -4,24 +4,25 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from .models import SportsEquipment, Order, OrderItem
 from django.contrib.auth.models import User
+from .forms import CustomUserCreationForm
 
 def home_view(request):
-    # Initially set products to all products
     products = SportsEquipment.objects.all()
     sort_option = request.GET.get('sort')
 
     # Check if a search query is provided
     query = request.GET.get('query')
     if query:
-    
         # Perform a case-insensitive search across multiple fields
-        products = SportsEquipment.objects.filter(name__icontains=query)
-        if sort_option == 'price_low':
-            products = products.order_by('price')
-        elif sort_option == 'price_high':
-            products = products.order_by('-price')
+        products = products.filter(name__icontains=query)
 
-    return render(request, "home.html", {"products": products, "query": query,  "sort_option": sort_option})
+    # Default sorting is "Featured"
+    if sort_option == 'price_low':
+        products = products.order_by('price')
+    elif sort_option == 'price_high':
+        products = products.order_by('-price')
+
+    return render(request, "home.html", {"products": products, "query": query, "sort_option": sort_option})
 '''
 when a user clicks on a link to add an item to the order the page 
 the equipment_id is passed to the add_to_order view by the url

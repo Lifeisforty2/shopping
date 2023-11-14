@@ -28,13 +28,13 @@
                 <label for="sort">Sort by:</label>
                 <select name="sort" id="sort">
                     <option value="">Featured</option>
-                    <option value="price_low">Price: Low to High</option>
-                    <option value="price_high">Price: High to Low</option>
+                    <option value="price_low" {% if sort_option == 'price_low' %}selected{% endif %}>Price: Low to High</option>
+                    <option value="price_high" {% if sort_option == 'price_high' %}selected{% endif %}>Price: High to Low</option>
                 </select>
                 <button type="submit">Apply</button>
             </form>
         </div>
-        <header>
+        <header> 
             <h1>Welcome to the Home Page</h1>
             <nav>
                 <a href="{% url 'logout' %} " class="logout-button">Logout</a> |
