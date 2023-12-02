@@ -83,19 +83,19 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        const removeLinks = document.querySelectorAll('.remove-item');
+        const removeLinks = document.querySelectorAll('.remove-item'); // select all remove links
 
-        removeLinks.forEach(link => {
-            link.addEventListener('click', e => {
-                e.preventDefault();
+        removeLinks.forEach(link => { 
+            link.addEventListener('click', e => {  // add event listener to each remove link 
+                e.preventDefault();          // stop the default action from happening. prevent navigation to the link's href
 
-                const listItem = e.target.parentElement;
-                const item_id = e.target.dataset.equipmentId;
+                const listItem = e.target.parentElement; // get the list item that contains the remove link
+                const item_id = e.target.dataset.equipmentId; // get the equipment id from the remove link's data attribute (data-equipment-id)
 
                 
-                fetch(`{% url 'remove_from_order' 0 %}`.replace('0', item_id), {
-                    method: 'GET', //or 'POST' if
-                    headers: {
+                fetch(`{% url 'remove_from_order' 0 %}`.replace('0', item_id), { // send a request to the remove_from_order view
+                    method: 'GET', // use the GET method
+                    headers: { // add the X-Requested-With header to the request
                         'X-Requested-With': 'XMLHttpRequest',
                     }
                 })
