@@ -98,14 +98,18 @@ main {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     overflow: hidden;
     background-color: lightsteelblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
 }
 
 /* Product image styling */
 .product-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
+    width: 100%;  /* Adjusted to fill the width of the product-item */
+    aspect-ratio: 3/2; /* Set your desired aspect ratio, e.g., 1 for a square */
+    object-fit: contain;
+    mix-blend-mode: color-burn;
 }
 
 /* Welcome message styling */

@@ -1,0 +1,46 @@
+class Node:
+    def __init__(self, sub="", children=None):
+        self.sub = sub  # substring of the input string
+        self.children = {} if children is None else children
+
+class SuffixTree:
+    def __init__(self, s):
+        self.nodes = [Node()]
+        self.build(s)
+
+    def build(self, s):
+        for i in range(len(s)):  # for each suffix
+            cur = 0  # we start at the root
+            j = i
+            while j < len(s):
+                if s[j] not in self.nodes[cur].children:
+                    n = len(self.nodes)
+                    self.nodes.append(Node(s[j:]))
+                    self.nodes[cur].children[s[j]] = n
+                    break
+                child = self.nodes[cur].children[s[j]]
+                label = self.nodes[child].sub
+                k = j + 1
+                while k - j < len(label) and s[k] == label[k - j]:
+                    k += 1
+                if k - j == len(label):
+                    cur = child
+                    j = k
+                else:  # split edge
+                    c = len(self.nodes)
+                    self.nodes.append(Node(label[:k - j]))
+                    self.nodes[child].sub = label[k - j:]
+                    self.nodes[c].children[label[k - j]] = child
+                    self.nodes[cur].children[s[j]] = c
+                    cur = c
+                    break
+
+    def visualize(self, node=0, prefix=""):
+        if node != 0:
+            print(prefix + self.nodes[node].sub)
+        for child in self.nodes[node].children.values():
+            self.visualize(child, prefix + self.nodes[node].sub)
+
+# Example usage
+st = SuffixTree("banana$")
+st.visualize()

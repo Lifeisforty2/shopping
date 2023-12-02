@@ -31,6 +31,10 @@ urlpatterns = [
     path("logout/", LogoutView.as_view(next_page="login"), name="logout"),
     path("add_to_order/<int:equipment_id>/", views.add_to_order, name="add_to_order"),
     path("register/", views.register, name="register"),
+    path("process_checkout/", views.process_checkout, name="process_checkout"),
+    path("order_confirmation/<int:order_id>/", views.order_confirmation, name="order_confirmation"),
+    path("checkout/", views.checkout, name="checkout"),
+    path("remove_from_order/<int:item_id>/", views.remove_from_order, name="remove_from_order"),
     #...
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

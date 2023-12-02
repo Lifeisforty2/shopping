@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Confirmation</title>
+    {% load static %}
+    <link href="{% static 'shop/style.css' %}" rel="stylesheet" >
+</head>
+<body>
+    <div class="order-confirmation">
+        <h1>Thank you for your order!</h1>
+        <p>Your order has been placed successfully. A confirmation email has been sent to your email address.</p>
+        <p><strong>Order Number:</strong> {{ order.id }}</p>
+        <p><strong>Estimated Delivery:</strong> [Estimated Delivery Date]</p>
+
+        <h2>Order Summary</h2>
+        <ul>
+            {% for item in order.items.all %}
+                <li>{{ item.equipment.name }} - Quantity: {{ item.quantity }} - Price: {{ item.price }}</li>
+            {% empty %}
+                <li>No items in order.</li>
+            {% endfor %} 
+        </ul>
+
+        <p><strong>Total Cost:</strong> [Total Cost]</p>
+
+        <a href="{% url 'home' %}">Continue Shopping</a>
+    </div>
+</body>
+</html>
