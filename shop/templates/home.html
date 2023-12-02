@@ -60,16 +60,70 @@
             </div>
         </main>
     </div>
-
+    <!-- mini-cart -->
     <div class="mini-cart">
         <h3>Your Cart</h3>
         <ul>
             {% for item in cart.items.all %}
-                <li>{{ item.equipment.name }} - {{ item.quantity }}</li>
+                <li>
+                    {{ item.equipment.name }} - <span class="item-quantity">Quantity: {{ item.quantity }}</span>
+                    <a href="#" class="remove-item" data-equipment-id="{{ item.id }}">Remove</a>
+                </li>
+
             {% empty %}
                 <li>Your cart is empty</li>
             {% endfor %}
         </ul>
+        <p><strong>Total Cost:</strong> ${{ cart_total }}</p>
+        {% if cart.items.exists %}
+            <a href="{% url 'checkout' %}">Checkout</a>
+        {% endif %}
     </div>
 </body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const removeLinks = document.querySelectorAll('.remove-item');
+
+        removeLinks.forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+
+                const listItem = e.target.parentElement;
+                const item_id = e.target.dataset.equipmentId;
+
+                
+                fetch(`{% url 'remove_from_order' 0 %}`.replace('0', item_id), {
+                    method: 'GET', //or 'POST' if
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest',
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        if (data.update_quantity === 0) {
+                            listItem.remove();
+                        } else {
+                            const quantityElement = listItem.querySelector('.item-quantity');
+                            if (quantityElement) {
+                                quantityElement.textContent = `Quantity: ${data.updated_quantity}`;
+                            }
+                        }
+
+                        // update cart total
+                        const cartTotalElement = document.querySelector('.mini-cart p');
+                        if (cartTotalElement) {
+                            cartTotalElement.textContent = `Total Cost: $${data.new_cart_total}`;
+                        }
+
+                    }
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+            });
+        });
+    });
+</script>
 </html>
