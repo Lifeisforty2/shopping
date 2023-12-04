@@ -1,5 +1,7 @@
 from django.db import models
 from django.conf import settings
+from django.db import models
+
 '''
 Django user model has the following fields:
 username
@@ -7,7 +9,16 @@ password
 '''
 # equipmentid = models.AutoField(primary_key=True)
 
-# Create your models here.
+
+class Product(models.Model):
+    # Create your models here.
+    name = models.CharField(max_length=100)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+    description = models.TextField()
+    image = models.ImageField(upload_to="images/")
+    def __str__(self):
+        return self.name
+
 class SportsEquipment(models.Model):
     
     name = models.CharField(max_length=100)

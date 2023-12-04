@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Equipment Details</title>
+    {% load static %}
+    <link href="{% static 'shop/style.css' %}" rel="stylesheet"></head>
+<body>
+    <div class="product-container">
+        <div class="product-info">
+            <h2 class="product-title">{{ equipment.name }}</h2>
+            <div class="product-details">
+                <div class="product-label">Description:</div>
+                <p class="product-description">{{ equipment.description }}</p>
+
+                <div class="product-label">Equipment Type:</div>
+                <p>{{ equipment.equipment_type }}</p>
+
+                <div class="product-label">Brand:</div>
+                <p>{{ equipment.brand }}</p>
+
+                <div class="product-label">Price:</div>
+                <p>{{ equipment.price }}</p>
+
+                <div class="product-label">Available:</div>
+                <p>{{ equipment.available }}</p>
+            </div>
+            <div class="product-buttons">
+                <a href="{% url 'home' %}" class="button">Back to Home</a>
+            </div>
+        </div>
+        <div class="product-image-container">
+            <img src="{{ equipment.image.url }}" alt="{{ equipment.name }}" class="equipment-image">
+        </div>
+    </div>
+</body>
+</html>

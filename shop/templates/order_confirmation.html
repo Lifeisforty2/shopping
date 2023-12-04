@@ -10,7 +10,7 @@
         <h1>Thank you for your order!</h1>
         <p>Your order has been placed successfully. A confirmation email has been sent to your email address.</p>
         <p><strong>Order Number:</strong> {{ order.id }}</p>
-        <p><strong>Estimated Delivery:</strong> [Estimated Delivery Date]</p>
+        <p><strong>Estimated Delivery:</strong> February 2, 2024</p>
 
         <h2>Order Summary</h2>
         <ul>
@@ -21,7 +21,7 @@
             {% endfor %} 
         </ul>
 
-        <p><strong>Total Cost:</strong> [Total Cost]</p>
+        <p><strong>Total Cost:</strong> ${{ cart_total }}</p>
 
         <a href="{% url 'home' %}">Continue Shopping</a>
     </div>
