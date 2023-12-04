@@ -52,12 +52,20 @@ form {
 .logout-button:hover,
 .button-primary:hover,
 .button:hover {
-    background-color: #333333; 
+    background-color: #81511f; 
 }
 
 /* Customize login and register buttons */
 .button-primary {
     background-color: #f0dc24; 
+    color: #000000; 
+}
+.button {
+    background-color: #d58b3b; 
+    color: #000000; 
+}
+.search-button {
+    background-color: #d58b3b; 
     color: #000000; 
 }
 
@@ -67,7 +75,8 @@ form {
 }
 
 .logout-button {
-color: #ffffff; 
+    background-color: #d58b3b; 
+    color: #000000; 
 }
 
 /* Header styling */
@@ -147,7 +156,7 @@ h1, h2 {
 h1 {
     margin-bottom: 20px;
     font-size: 36px;
-    color: #ffffff; 
+    color: #004080; 
 }
 
 h2 {
@@ -157,6 +166,105 @@ h2 {
 }
 
 h3, p {
-    color: #000080;
+    color: #000000;
+}
+
+/* Add styles for product container */
+.product-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Add styles for product info */
+.product-info {
+    flex: 1;
+    max-width: 400px;
+}
+
+/* Add styles for product image container */
+.product-image-container {
+    flex: 1;
+    max-width: 400px;
+    text-align: right;
+}
+
+/* Add styles for equipment image */
+.equipment-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Add styles for product buttons */
+.product-buttons {
+    margin-top: 20px;
+}
+
+/* Add styles for back button */
+.back-button
+.place-order-button {
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #d58b3b; 
+    color: #000000; 
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.checkout-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.checkout-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.product-label {
+    color: #004080;
+    font-weight: bold;
+}
+
+
+/* Add these styles to your CSS file */
+
+.product-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.product-info {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.product-details {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f8f8f8;
+}
+
+.product-label {
+    color: #004080;
+    font-weight: bold;
+}
+
+.product-image-container {
+    flex: 1;
+}
+
+.product-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.product-item h4 {
+    text-align: center;
+    color: #004080; 
+    font-size: 22px;    
 }
 

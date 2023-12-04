@@ -8,6 +8,7 @@ from .forms import CustomUserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.http import JsonResponse
+from .models import SportsEquipment, Order, OrderItem, ShippingAddress, Product
 
 
 def home_view(request):
@@ -118,7 +119,14 @@ def process_checkout(request):
 @login_required
 def order_confirmation(request, order_id):
     order = get_object_or_404(Order, id=order_id)
-    return render(request, 'order_confirmation.html', {'order': order})
+    cart_total = sum(item.get_cost() for item in order.items.all())
+    cart_total = round(cart_total, 2)
+    return render(request, 'order_confirmation.html', {'order': order,"cart_total": cart_total})
 @login_required
 def checkout(request):
     return render(request, "checkout.html")
+
+# product view
+def product(request, equipment_id):
+    equipment = get_object_or_404(SportsEquipment, pk=equipment_id)
+    return render(request, 'product.html', {'equipment': equipment})

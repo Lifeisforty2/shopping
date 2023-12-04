@@ -22,7 +22,8 @@ from django.contrib.auth.views import LogoutView
 from shop import views
 from django.conf import settings
 from django.conf.urls.static import static
-
+from django.urls import path
+from shop.views import product
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -35,6 +36,7 @@ urlpatterns = [
     path("order_confirmation/<int:order_id>/", views.order_confirmation, name="order_confirmation"),
     path("checkout/", views.checkout, name="checkout"),
     path("remove_from_order/<int:item_id>/", views.remove_from_order, name="remove_from_order"),
-    #...
+    path("product/<int:equipment_id>/", product, name="product"),  
+
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
